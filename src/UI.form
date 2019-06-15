@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="UI">
+  <grid id="27dc6" binding="panel2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <minimumSize width="500" height="300"/>
+      <name value="mainPanel"/>
+      <preferredSize width="500" height="300"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="a0b31" binding="panel1" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="500" height="300"/>
+            <maximum-size width="500" height="300"/>
+          </grid>
+        </constraints>
+        <properties>
+          <name value="secondPanel"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="c8e72" class="javax.swing.JLabel" binding="aLabel">
+            <constraints/>
+            <properties>
+              <labelFor value="84c7"/>
+              <preferredSize width="15" height="16"/>
+              <text value="a"/>
+            </properties>
+          </component>
+          <component id="84c7" class="javax.swing.JTextField" binding="aTextField">
+            <constraints/>
+            <properties>
+              <preferredSize width="100" height="30"/>
+            </properties>
+          </component>
+          <component id="1af55" class="javax.swing.JLabel" binding="bLabel">
+            <constraints/>
+            <properties>
+              <labelFor value="b0fed"/>
+              <text value="b"/>
+            </properties>
+          </component>
+          <component id="b0fed" class="javax.swing.JTextField" binding="bTextField">
+            <constraints/>
+            <properties>
+              <preferredSize width="100" height="30"/>
+            </properties>
+          </component>
+          <component id="244d5" class="javax.swing.JLabel" binding="cLabel">
+            <constraints/>
+            <properties>
+              <labelFor value="d4164"/>
+              <text value="c"/>
+            </properties>
+          </component>
+          <component id="d4164" class="javax.swing.JTextField" binding="cTextField">
+            <constraints/>
+            <properties>
+              <preferredSize width="100" height="30"/>
+            </properties>
+          </component>
+          <component id="ef4e8" class="javax.swing.JLabel" binding="dLabel">
+            <constraints/>
+            <properties>
+              <labelFor value="db73e"/>
+              <text value="d"/>
+            </properties>
+          </component>
+          <component id="db73e" class="javax.swing.JTextField" binding="dTextField">
+            <constraints/>
+            <properties>
+              <preferredSize width="100" height="30"/>
+            </properties>
+          </component>
+          <component id="85688" class="javax.swing.JLabel" binding="resultLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="40" height="20"/>
+              <text value="Result"/>
+            </properties>
+          </component>
+          <scrollpane id="9b6d7" binding="scrollPane">
+            <constraints/>
+            <properties>
+              <horizontalScrollBarPolicy value="32"/>
+              <verticalScrollBarPolicy value="22"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f77b9" class="javax.swing.JTextArea" binding="displeyTextArea">
+                <constraints/>
+                <properties>
+                  <margin top="10" left="0" bottom="0" right="0"/>
+                  <preferredSize width="425" height="200"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="3cb62" class="javax.swing.JButton" binding="buttonCount">
+            <constraints/>
+            <properties>
+              <text value="Count"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

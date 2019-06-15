@@ -30,7 +30,7 @@ public class CubicEquaction {
         {
         }
 
-//Exported operations.
+
 
 
         public void solve
@@ -39,13 +39,13 @@ public class CubicEquaction {
          BigDecimal c,
          BigDecimal d)
         {
-            // Verify preconditions.
+
             if (a.equals(zero))
             {
                 throw new RuntimeException ("Cubic.solve(): a = 0");
             }
 
-            // Normalize coefficients.
+
             BigDecimal denom = a;
             a = b.divide(denom, BigDecimal.ROUND_HALF_EVEN);
             b = c.divide(denom, BigDecimal.ROUND_HALF_EVEN);
@@ -95,9 +95,9 @@ public class CubicEquaction {
                 BigDecimal x2_cos_Big=new BigDecimal(x2_cos);
                 BigDecimal x3_cos_Big=new BigDecimal(x3_cos);
                 tmp=new BigDecimal(2.0);
-                x1=tmp.multiply(SQRT_Q).multiply(x1_cos_Big).subtract(a_over_3);
-                x2=tmp.multiply(SQRT_Q).multiply(x2_cos_Big).subtract(a_over_3);
-                x3=tmp.multiply(SQRT_Q).multiply(x3_cos_Big).subtract(a_over_3);
+                x1=tmp.multiply(SQRT_Q).multiply(x1_cos_Big).subtract(a_over_3).setScale(12,BigDecimal.ROUND_HALF_EVEN);
+                x2=tmp.multiply(SQRT_Q).multiply(x2_cos_Big).subtract(a_over_3).setScale(12,BigDecimal.ROUND_HALF_EVEN);
+                x3=tmp.multiply(SQRT_Q).multiply(x3_cos_Big).subtract(a_over_3).setScale(12,BigDecimal.ROUND_HALF_EVEN);
 
                 sortRoots();
             }
@@ -118,7 +118,7 @@ public class CubicEquaction {
             }
             else
             {
-                // Three real roots, at least two equal.
+
                 nRoots =new BigInteger("3");
                 double CBRT_R_double = Math.cbrt (R.doubleValue());
                 tmp=new BigDecimal(2);
@@ -147,22 +147,22 @@ public class CubicEquaction {
             }
         }
 
-        public static void main(String[] args) throws Exception {
-
-            BigDecimal a = new BigDecimal(1).setScale(12, HALF_DOWN);
-            BigDecimal b = new BigDecimal(4).setScale(12, HALF_DOWN);
-            BigDecimal c=new BigDecimal(7).setScale(12,HALF_DOWN);
-            BigDecimal d=new BigDecimal(8).setScale(12,HALF_DOWN);
-          //  a=a.negate();
-         //   c=c.negate();
-            CubicEquaction cubic = new CubicEquaction();
-            cubic.solve(a, b, c, d);
-            System.out.println("x1 = " + cubic.x1);
-            if (cubic.nRoots.doubleValue() == 3) {
-                System.out.println("x2 = " + cubic.x2);
-                System.out.println("x3 = " + cubic.x3);
-            }
-        }
+//        public static void main(String[] args) throws Exception {
+//
+//            BigDecimal a = new BigDecimal(1).setScale(12, HALF_DOWN);
+//            BigDecimal b = new BigDecimal(0).setScale(12, HALF_DOWN);
+//            BigDecimal c=new BigDecimal(0).setScale(12,HALF_DOWN);
+//            BigDecimal d=new BigDecimal(0).setScale(12,HALF_DOWN);
+//          //  a=a.negate();
+//         //   c=c.negate();
+//            CubicEquaction cubic = new CubicEquaction();
+//            cubic.solve(a, b, c, d);
+//            System.out.println("x1 = " + cubic.x1);
+//            if (cubic.nRoots.doubleValue() == 3) {
+//                System.out.println("x2 = " + cubic.x2);
+//                System.out.println("x3 = " + cubic.x3);
+//            }
+//        }
 
     }
 
