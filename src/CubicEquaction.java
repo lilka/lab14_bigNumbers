@@ -7,42 +7,25 @@ public class CubicEquaction {
 
 
 
-//Hidden constants.
-
         private static final double TWO_PI = 2.0 * Math.PI;
         private static final double FOUR_PI = 4.0 * Math.PI;
 
-//Exported fields.
 
-        /**
-         * The number of real roots.
-         */
         public BigInteger nRoots;
 
-        /**
-         * The first real root.
-         */
+
         public BigDecimal x1;
 
-        /**
-         * The second real root.
-         */
         public BigDecimal x2;
 
-        /**
-         * The third real root.
-         */
+
         public BigDecimal x3;
 
         public BigDecimal zero=new BigDecimal(0.0);
 
         public double zeroInDouble=zero.doubleValue();
 
-//Exported constructors.
 
-        /**
-         * Construct a new Cubic object.
-         */
         public CubicEquaction()
         {
         }
@@ -146,11 +129,8 @@ public class CubicEquaction {
             }
         }
 
-//Hidden operations.
 
-        /**
-         * Sort the roots into descending order.
-         */
+
         private void sortRoots()
         {
             if (x1.doubleValue() < x2.doubleValue())
@@ -167,14 +147,6 @@ public class CubicEquaction {
             }
         }
 
-        // Unit test main program.
-
-        /**
-         * Unit test main program.
-         * <P>
-         * Usage: java benchmarks.detinfer.pj.edu.rit.numeric.Cubic <I>a</I>
-         * <I>b</I> <I>c</I> <I>d</I>
-         */
         public static void main(String[] args) throws Exception {
 
             BigDecimal a = new BigDecimal(1).setScale(12, HALF_DOWN);
